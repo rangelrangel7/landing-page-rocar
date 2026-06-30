@@ -1,6 +1,6 @@
 Landing Page desenvolvida para a **Rocar Oficina Mecânica**, com foco em apresentar a empresa, seus serviços e facilitar o contato com os clientes.
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 - Página totalmente responsiva
 - Design moderno e intuitivo
