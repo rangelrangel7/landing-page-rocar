@@ -1,7 +1,3 @@
-// =========================
-// BOTÃO WHATSAPP (efeito leve)
-// =========================
-
 const whatsapp = document.querySelector(".whatsapp");
 
 if (whatsapp) {
@@ -15,9 +11,6 @@ if (whatsapp) {
     });
 }
 
-// =========================
-// SCROLL SUAVE (reforço)
-// =========================
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", function (e) {
