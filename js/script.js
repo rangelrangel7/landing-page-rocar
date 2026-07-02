@@ -11,9 +11,9 @@ if (whatsapp) {
     });
 }
 
-
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", function (e) {
+
         e.preventDefault();
 
         const target = document.querySelector(this.getAttribute("href"));
@@ -23,5 +23,20 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
                 behavior: "smooth"
             });
         }
+
     });
+});
+
+// FAQ 
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        card.classList.toggle("ativo");
+
+    });
+
 });

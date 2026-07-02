@@ -14,7 +14,7 @@ body{
     color:#fff;
 }
 
-
+/* HEADER */
 
 header{
     background:#000;
@@ -30,8 +30,6 @@ header{
 .logorocar{
     width:200px;
 }
-
-/* NAV */
 
 nav{
     display:flex;
@@ -49,62 +47,17 @@ nav a:hover{
     color:#8d8a8a;
 }
 
+
 .hero{
-    height:90vh;
+    height:89vh;
     background:url("../img/hero.png") center/cover no-repeat;
     display:flex;
     justify-content:flex-end;
     align-items:center;
 }
 
-.hero .overlay{
-    width:100%;
-    max-width:900px;
-    padding:0 8%;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-end;
-    text-align:center;
-}
 
-.hero .overlay h1,
-.hero .overlay p{
-    max-width:700px;
-}
-
-.overlay p{
-    width:100%;
-    background:rgba(0, 0, 0, 0.051);
-    display:block;
-    padding:20px;
-    margin:0 0 10px 0;
-}
-
-.hero h1{
-    font-size:55px;
-    margin-bottom:20px;
-    text-align:center;
-}
-
-.hero p{
-    font-size:22px;
-    margin-bottom:35px;
-}
-
-
-.btn{
-    background:#013aa1;
-    color:#fff;
-    padding:15px 35px;
-    border-radius:8px;
-    text-decoration:none;
-    transition:.3s;
-    display: flex;
-}
-
-.btn:hover{
-    background:#062359;
-}
+/* CONTAINERS */
 
 .container,
 .container2{
@@ -125,31 +78,63 @@ nav a:hover{
     text-align:center;
 }
 
+/* CARDS */
+
 .cards{
     display:grid;
-    grid-template-columns:repeat(5,2fr);
+    grid-template-columns:repeat(5,1fr);
     gap:15px;
 }
 
 .card{
     background:#fff;
     color:#000;
-    padding:40px;
+    padding:25px;
     border-radius:12px;
     text-align:center;
     box-shadow:0 5px 20px rgba(0,0,0,.15);
+    cursor:pointer;
     transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-6px);
 }
-
 
 .icon{
     width:60px;
     height:60px;
     margin-bottom:10px;
+}
+
+/* FAQ descricao */
+
+.descricao{
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+
+    margin-top:0;
+
+    font-size:15px;
+    line-height:1.5;
+
+    transition:all .4s ease;
+
+    color:#444;
+}
+
+/* quando o card estiver ativo */
+.card.ativo .descricao{
+    max-height:200px;
+    opacity:1;
+
+    margin-top:12px;
+}
+
+.card.ativo{
+    transform:translateY(-6px);
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
 
 
@@ -159,11 +144,11 @@ nav a:hover{
     margin:15px 0;
 }
 
-
 iframe{
     margin-top:30px;
     border-radius:10px;
 }
+
 
 footer{
     background:#000;
@@ -188,27 +173,55 @@ footer{
     width:60px;
     height:60px;
     background:#25D366;
-    color:#fff;
     border-radius:50%;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:28px;
-    text-decoration:none;
-    box-shadow:0 5px 20px rgba(0,0,0,.3);
     z-index:9999;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
 }
 
 .zap{
-    width: 40px;
-    height: auto;
+    width:40px;
 }
-@media (max-width:992px){
+.zap2{
+    width: 35px;
+    
 
+}
+
+.btn-instagram{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    margin-top:20px;
+    padding:15px 30px;
+
+    background:#E1306C;
+    color:#fff;
+
+    text-decoration:none;
+    border-radius:8px;
+
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-instagram:hover{
+    transform:translateY(-2px);
+    background:#c61f5b;
+}
+
+.btn-instagram i{
+    font-size:22px;
+}
+
+
+@media (max-width:992px){
     .cards{
         grid-template-columns:repeat(2,1fr);
     }
-
 }
 
 @media (max-width:768px){
@@ -216,21 +229,10 @@ footer{
     header{
         flex-direction:column;
         gap:15px;
-        padding:20px;
-    }
-
-    nav{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
     }
 
     .logorocar{
         width:170px;
-    }
-
-    .hero{
-        height:70vh;
     }
 
     .hero h1{
@@ -242,19 +244,12 @@ footer{
     }
 
     .btn{
-        padding:12px 28px;
-        font-size:16px;
+        padding:12px 25px;
     }
 
     .container,
     .container2{
         width:92%;
-        padding:60px 0;
-    }
-
-    .container h2,
-    .container2 h2{
-        font-size:30px;
     }
 
     .sobre-texto{
@@ -268,11 +263,9 @@ footer{
     #contato p{
         font-size:18px;
     }
-
 }
 
 @media (max-width:480px){
-
     .hero h1{
         font-size:30px;
     }
@@ -280,34 +273,4 @@ footer{
     .hero p{
         font-size:16px;
     }
-
-}
-
-.btn-instagram{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-
-    margin-top:20px;
-    padding:15px 30px;
-
-    background:#E1306C;
-    color:#fff;
-
-    text-decoration:none;
-    border-radius:8px;
-
-    font-weight:600;
-
-    transition:.3s;
-}
-
-.btn-instagram:hover{
-    background:#c61f5b;
-    transform:translateY(-2px);
-}
-
-.btn-instagram i{
-    font-size:22px;
 }
