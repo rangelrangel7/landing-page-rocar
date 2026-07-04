@@ -168,8 +168,8 @@ footer{
 
 .whatsapp{
     position:fixed;
-    top:160px;
-    left:25px;
+    bottom:40px;
+    right:25px;
     width:60px;
     height:60px;
     background:#25D366;
