@@ -126,7 +126,7 @@ nav a:hover{
 
 /* quando o card estiver ativo */
 .card.ativo .descricao{
-    max-height:200px;
+    max-height:900px;
     opacity:1;
 
     margin-top:12px;
